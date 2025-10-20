@@ -6,8 +6,8 @@ WORKDIR /app
 
 # Dependencies
 FROM base AS deps
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json ./
+RUN npm install --frozen-lockfile 2>/dev/null || npm install
 
 # Builder
 FROM base AS builder
