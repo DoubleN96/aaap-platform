@@ -69,7 +69,7 @@
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.6.3",
     "openai": "^4.77.1",
-    "@anthropic-ai/sdk": "^0.34.3",
+    "@anthropic-ai/sdk": "^0.27.3",
     "langchain": "^0.3.13",
     "@langchain/openai": "^0.3.20",
     "@langchain/anthropic": "^0.3.14",
