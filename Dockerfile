@@ -4,15 +4,11 @@ FROM node:20-alpine AS base
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Dependencies
-FROM base AS deps
-COPY package.json ./
-RUN npm install
-
 # Builder
 FROM base AS builder
-COPY --from=deps /app/node_modules ./node_modules
+COPY package.json ./
 COPY . .
+RUN npm install
 RUN npm run build
 
 # Runner
