@@ -7,7 +7,7 @@ WORKDIR /app
 # Dependencies
 FROM base AS deps
 COPY package.json ./
-RUN npm install --frozen-lockfile 2>/dev/null || npm install
+RUN npm install
 
 # Builder
 FROM base AS builder
